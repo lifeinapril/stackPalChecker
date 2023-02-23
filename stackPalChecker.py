@@ -38,9 +38,9 @@ def is_palindrome(word):
 
 
 with open('palindrome.txt', 'r') as file:
-    for line in file:
-        word = line.strip()
-        if is_palindrome(word):
-            print(word, 'is a proper palindrome')
-        else:
-            print(word, 'is NOT a proper palindrome')
+        words = file.read().split(',')
+        for word in words:
+            if is_palindrome(word):
+                print(word, 'is a proper palindrome')
+            else:
+                print(word, 'is NOT a proper palindrome')
